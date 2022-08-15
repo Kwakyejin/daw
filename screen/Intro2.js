@@ -6,7 +6,7 @@ import logo from "../assets/Group-2.svg"
 import title from "../assets/dawtitle.svg"
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-const Intro2 = () => (
+const Intro2 = ({navigation}) => (
   <View style={styles.container}>
     <ImageBackground source={require("../assets/map.png")} resizeMode="cover" style={styles.image}>
     <LinearGradient colors={['black', 'rgba(255,255,255,0)']} style={styles.container}>
@@ -25,7 +25,7 @@ const Intro2 = () => (
         />
         </View>
       <View style={{justifyContent:"flex-end",position : "absolute", bottom: 50 }}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>navigation.navigate("Login")}>
       <View style={{ height:52, width:315, backgroundColor:"#292929", alignItems:"center", justifyContent:"center", borderRadius:10}}>
         <Text style={{color:"white"}}>LOG IN</Text>
       </View>
