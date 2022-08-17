@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function Main_map() {
+export default function Main_board() {
   return (
     <View>
-      <Text>Main_map</Text>
+      <Text>Main_board</Text>
     </View>
   )
 }

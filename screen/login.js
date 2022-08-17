@@ -17,7 +17,7 @@ export default function Login({navigation}) {
     const login = async(id) => {
         const result = await loginapi(id)
         console.log(result)
-        navigation.navigate("Main_dawlist")
+        navigation.navigate("Tabs")
     }
         
     const [id, setid] = useState("");
