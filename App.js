@@ -7,27 +7,78 @@ import Main_dawlist from './screen/Main_dawlist.js';
 import Main_chat from './screen/Main_chat';
 import Main_board from './screen/Main_board';
 import Main_settings from './screen/Main_settings';
+import Icon from "react-native-vector-icons/Ionicons";
+import { StyleSheet, Text, View } from 'react-native'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+    screenOptions={{
+     tabBarActiveBackgroundColor: '#FFCD36',
+     tabBarInactiveBackgroundColor:'#FFCD36',
+     tabBarInactiveTintColor:"black",
+   }}>
       <Tab.Screen
         name="Daw list"
-        component={Main_dawlist}/>
+        component={Main_dawlist}
+        options={{
+          tabBarIcon: ({ tabBarActiveTintColor, color, size }) => (
+            <Icon
+              name="menu-outline"
+              color={color}
+              size = {size}
+              active={tabBarActiveTintColor}
+            />
+          ),
+          tabBarActiveTintColor: "#348CFA",
+        }}/>
       <Tab.Screen
         name="Chat"
         component={Main_chat}
+        options={{
+          tabBarIcon: ({ tabBarActiveTintColor, color, size }) => (
+            <Icon
+              name="chatbubbles-outline"
+              color={color}
+              size = {size}
+              active={tabBarActiveTintColor}
+            />
+          ),
+          tabBarActiveTintColor: "#348CFA",
+        }}
       />
       <Tab.Screen
         name="공유게시판"
         component={Main_board}
+        options={{
+          tabBarIcon: ({ tabBarActiveTintColor, color, size }) => (
+            <Icon
+              name="document-text-outline"
+              color={color}
+              size = {size}
+              active={tabBarActiveTintColor}
+            />
+          ),
+          tabBarActiveTintColor: "#348CFA",
+        }}
       />
       <Tab.Screen
         name="Setting"
         component={Main_settings}
+        options={{
+          tabBarIcon: ({ tabBarActiveTintColor, color, size }) => (
+            <Icon
+              name="settings-outline"
+              color={color}
+              size = {size}
+              active={tabBarActiveTintColor}
+            />
+          ),
+          tabBarActiveTintColor: "#348CFA",
+        }}
       />
     </Tab.Navigator>
   );
@@ -49,3 +100,6 @@ export default function App() {
 }
 
 
+const style = StyleSheet.create({
+
+});
