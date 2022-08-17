@@ -3,9 +3,24 @@ import { TextInput, StyleSheet, Text, View, Image, TouchableOpacity, Alert } fro
 import { WithLocalSvg } from "react-native-svg";
 import background from "../assets/login-background.svg"
 import Icon from 'react-native-vector-icons/Ionicons';
+import axios from "axios"
 
 export default function Login({navigation}) {
-    const [email, setemail] = useState("");
+
+    const API_URL = "http://10.125.218.14:8011/daw_login/?id="
+
+    const loginapi = async(id) => {
+        const result = await axios.get(API_URL+id)
+        return result?.data
+    }
+    
+    const login = async(id) => {
+        const result = await loginapi(id)
+        console.log(result)
+        navigation.navigate("Main_dawlist")
+    }
+        
+    const [id, setid] = useState("");
     const [password, setpassword] = useState("");
 
   return (
@@ -45,8 +60,8 @@ export default function Login({navigation}) {
                         />
                         <TextInput
                             style={styles.content}
-                            value={email}
-                            onChangeText={setemail}
+                            value={id}
+                            onChangeText={setid}
                             placeholder="mymail@domain.abc"
                         />
 
@@ -69,7 +84,7 @@ export default function Login({navigation}) {
                 </View>
                 
                 <View style={styles.footer}>
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => login(id)}>
                         <Text style={styles.word}>로그인</Text>
                     </TouchableOpacity>
                 </View>
