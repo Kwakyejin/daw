@@ -10,7 +10,6 @@ export default function Chatting({navigation}) {
     const [message, setmessage] = useState("");
 
     return (
-
         <View style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity onPress={()=>navigation.goBack()}>

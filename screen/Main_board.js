@@ -1,7 +1,27 @@
 import React from 'react';
 import { SectionList, StyleSheet, Text, Touchable, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-export default function Main_board() {
+import axios from "axios"
+
+export default function Main_board({route}) {
+  const {name} = route.params
+  console.log(name)
+  const API_URL = "http://10.125.218.14:8011/get_daw_list/?name="
+  
+  const result = 
+    axios.get(API_URL+encodeURI(name))
+      .then(response => {
+        return response
+      })
+      .catch(error => {
+        console.error(error);
+      })
+   console.log(result)
+   
+  /*const API_URL2 = "http://10.125.218.14:8011/get_daw_list/"
+  const result2 = axios.get(API_URL2)
+  console.log(result2)*/
+
   const newTaskData = [{
     title: "New Tasks",
     data: [
@@ -43,9 +63,9 @@ export default function Main_board() {
   return (
     <View style={styles.container}>
       <SectionList
-        sections={[...newTaskData, ...completedTaskData]}
+        sections={[...newTaskData]}
         renderItem={({item})=>(
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>navigate.navigation("Map")}>
             <Text style={styles.taskItem}>{item.task}</Text>
           </TouchableOpacity>
         )}

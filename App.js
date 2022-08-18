@@ -7,13 +7,14 @@ import Main_chat from './screen/Main_chat';
 import Main_board from './screen/Main_board';
 import Main_settings from './screen/Main_settings';
 import Chatting from './screen/Chatting';
+import Map from "./screen/Map"
 import Icon from "react-native-vector-icons/Ionicons";
 import { StyleSheet, Text, View } from 'react-native'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const Tab = createBottomTabNavigator();
 
-const Tabs = () => {
+const Tabs = ({navigation, route}) => {
   return (
     <Tab.Navigator
     screenOptions={{
@@ -83,6 +84,7 @@ export default function App() {
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
         <Stack.Screen name="Tabs" component={Tabs} options={{ headerShown: false }}/>
         <Stack.Screen name="Chatting" component={Chatting} options={{ headerShown: false }}/>
+        <Stack.Screen name="Map" component={Map} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

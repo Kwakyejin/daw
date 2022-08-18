@@ -16,8 +16,7 @@ export default function Login({navigation}) {
     
     const login = async(id) => {
         const result = await loginapi(id)
-        console.log(result)
-        navigation.navigate("Tabs")
+        navigation.navigate("Tabs",{screen:"Board",params:{name : result.name}})
     }
         
     const [id, setid] = useState("");
