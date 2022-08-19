@@ -18,16 +18,18 @@ export default function Main_chat({navigation}) {
                   />
                   <View style={styles.chatcontent}>
                       <Text style={{
-                          color: '#292929', fontSize: 26,
+                          color: '#472816', fontSize: 23,
                           fontWeight: 'bold',
                           marginBottom: 5,
-                      }}>채팅방명
-                          <Text style={{ color: '#979797' }}> 인원수</Text>
+                          padding:2,
+                      }}>여행팸
+                          <Text style={{ color: '#A38778', padding:2 }}> 4</Text>
                       </Text>
                       <Text style={{
-                          color: '#979797',
-                          fontSize: 23,
-                      }}>채팅내용</Text>
+                          color: '#A38778',
+                          fontSize: 20,
+                          padding:2,
+                      }}>여기 괜찮은듯!!</Text>
 
                   </View>
               </TouchableOpacity>
@@ -40,7 +42,7 @@ export default function Main_chat({navigation}) {
 const styles = StyleSheet.create({
     container: {
       flex:1,
-      backgroundColor: '#292929',
+      backgroundColor: '#FFF7EE',
       alignItems: 'center',
     },
     header: {
@@ -49,7 +51,7 @@ const styles = StyleSheet.create({
         height: '8%',
         alignItems: 'center',
         marginTop: '10%',
-        backgroundColor: '#348CFA',
+        backgroundColor: '#FFF7EE',
         justifyContent: 'center',
     },
 
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
     body: {
         width: '100%',
         height: '67%',
-        backgroundColor: '#292929',
+        backgroundColor: '#FFF7EE',
         //alignItems: 'center',
     },
 
@@ -103,7 +105,7 @@ const styles = StyleSheet.create({
 
         //height: '100',
         //width: '200',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#FFE7DB',
         margin: 20,
         //marginBottom: 20,
         alignItems: 'center',

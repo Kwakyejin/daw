@@ -36,25 +36,25 @@ export default function Login({navigation}) {
                     <Text style={{
                         fontWeight: 'bold',
                         fontSize: 22,
-                        color:"#DADADA"
+                        color:"#3C2112"
                     }}>
                         로그인</Text>
 
                     <Text style={{
                         fontSize: 14,
-                        color: '#DADADA',
+                        color: '#3C2112',
                         paddingTop: '3%'
                     }}>
                         계정 정보를 입력해주세요</Text>
                 </View>
 
                 <View style={styles.logo}>
-                    <Text style={{ color:"#DADADA" }}>이메일</Text>
+                    <Text style={{ color:"#3C2112" }}>이메일</Text>
                     <View style={styles.holder}>
                         <Icon
                             style={styles.icon}
                             name='mail-outline'
-                            color='#6C7F90'
+                            color='#3C2112'
                             size={30}
                         />
                         <TextInput
@@ -65,12 +65,12 @@ export default function Login({navigation}) {
                         />
 
                     </View>
-                    <Text style={{ color:"#DADADA" }}>비밀번호</Text>
+                    <Text style={{ color:"#3C2112" }}>비밀번호</Text>
                     <View style={styles.holder}>
                         <Icon
                             style={styles.icon}
                             name="lock-closed-outline"
-                            color='#6C7F90'
+                            color='#3C2112'
                             size={30} />
 
                         <TextInput
@@ -94,7 +94,7 @@ export default function Login({navigation}) {
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
-        backgroundColor:"#292929",
+        backgroundColor:"#FFF7EE",
         width:"100%",
         height:"100%"
     },
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     },
     content: {
         justifyContent: 'center',
-        color: '#6C7F90',
+        color: '#472816',
         alignItems:"center",
         width:"100%"
     },
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
     },
     button: {
-        backgroundColor: '#348CFA',
+        backgroundColor: '#472816',
         paddingHorizontal: '7%',
         height:50,
         width:315,

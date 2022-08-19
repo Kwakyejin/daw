@@ -9,8 +9,8 @@ export default function Intro({navigation}) {
   <TouchableOpacity onPress={()=>navigation.navigate("Intro2")}>
     <View style={styles.style1}>
         <WithLocalSvg
-            width={233}
-            height={171}
+            width={180}
+            height={90}
             asset={daw}
         />
     </View>
@@ -20,7 +20,7 @@ export default function Intro({navigation}) {
 
 const styles = StyleSheet.create({
     style1:{
-        backgroundColor: '#292929',
+        backgroundColor: '#FFF7EE',
         alignItems: 'center',
         justifyContent:"center",
         width:"100%",

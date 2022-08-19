@@ -49,19 +49,20 @@ export default function Main_settings() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#262626'
+    backgroundColor: '#FFF7EE'
   },
   taskItem:{
     padding: 10,
     marginLeft: 10,
     marginVertical: 15,
     fontSize: 16,
-    color:"#ffffff"
+    color:"#472816"
   },
   taskTitle:{
-    backgroundColor: "#ffffff",
+    backgroundColor: "#FFE7DB",
     fontSize: 14,
     fontWeight: "bold",
+    color:"#472816",
     padding: 10,
     
   }

@@ -11,6 +11,7 @@ import Map from "./screen/Map"
 import Icon from "react-native-vector-icons/Ionicons";
 import { StyleSheet, Text, View } from 'react-native'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Popup from './screen/Popup';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,9 +19,9 @@ const Tabs = ({navigation, route}) => {
   return (
     <Tab.Navigator
     screenOptions={{
-     tabBarActiveBackgroundColor: '#FFCD36',
-     tabBarInactiveBackgroundColor:'#FFCD36',
-     tabBarInactiveTintColor:"black",
+     tabBarActiveBackgroundColor: '#FFE7DB',
+     tabBarInactiveBackgroundColor:'#FFE7DB',
+     tabBarInactiveTintColor:"#472816",
    }}>
       <Tab.Screen
         name="Board"
@@ -34,7 +35,7 @@ const Tabs = ({navigation, route}) => {
               active={tabBarActiveTintColor}
             />
           ),
-          tabBarActiveTintColor: "#348CFA",
+          tabBarActiveTintColor: "#FF8682",
         }}
       />
       <Tab.Screen
@@ -49,7 +50,7 @@ const Tabs = ({navigation, route}) => {
               active={tabBarActiveTintColor}
             />
           ),
-          tabBarActiveTintColor: "#348CFA",
+          tabBarActiveTintColor: "#FF8682",
         }}
       />
 
@@ -65,7 +66,7 @@ const Tabs = ({navigation, route}) => {
               active={tabBarActiveTintColor}
             />
           ),
-          tabBarActiveTintColor: "#348CFA",
+          tabBarActiveTintColor: "#FF8682",
         }}
       />
       
@@ -83,8 +84,9 @@ export default function App() {
         <Stack.Screen name="Intro2" component={Intro2} options={{ headerShown: false }}/>
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
         <Stack.Screen name="Tabs" component={Tabs} options={{ headerShown: false }}/>
-        <Stack.Screen name="Chatting" component={Chatting} options={{ headerShown: false }}/>
-        <Stack.Screen name="Map" component={Map} options={{ headerShown: false }}/>
+        <Stack.Screen name="Chatting" component={Chatting} options={{ headerShown: true}}/>
+        <Stack.Screen name="Map" component={Map} options={{ headerShown: true }}/>
+        <Stack.Screen name="popup" component={Popup} options={{ headerShown: true }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

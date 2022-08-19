@@ -11,36 +11,12 @@ export default function Chatting({navigation}) {
 
     return (
         <View style={styles.container}>
-            <View style={styles.header}>
-                <TouchableOpacity onPress={()=>navigation.goBack()}>
-                    <Icon
-                        style={styles.icon}
-                        name="chevron-back-outline"
-                        color='#FFFFFF'
-                        size={35} />
-                </TouchableOpacity>
-                <Text style={{
-                    fontWeight: 'normal',
-                    fontSize: 25,
-                    alignContent: 'center',
-                    color: '#FFFFFF'
-                }}>
-                    여행팸</Text>
-
-                <TouchableOpacity style={{ marginLeft: '57%'}}>
-                    <Icon
-                        style={styles.icon}
-                        name="menu-outline"
-                        color='#FFFFFF'
-                        size={35} />
-                </TouchableOpacity>
-
-            </View>
+            
             <View style={styles.body}>
                 <ScrollView style={styles.chatScrollView}>
                     <View style={styles.chatbox1}>
                         <Text style={styles.word}>
-                            내 채팅</Text>
+                            여기 인싸들만 가는 곳이래~</Text>
                     </View>
 
                     <View style={{
@@ -50,22 +26,20 @@ export default function Chatting({navigation}) {
                         justifyContent: 'center',
                         alignSelf: 'center',
                     }}>
-
-                    
                         <WithLocalSvg
-                        width={80}
-                        height={80}
+                        width={70}
+                        height={70}
                         asset={profile}
                         />
+
                         <View style={styles.chatbox2}>
-                            <Text style={styles.word}>상대방 채팅
-                                말ㅇ릉ㅁㄴㅇㄻㄴㄹㅇㅁㄴㅇ랑ㄴ러밍러ㅣㅁ아ㅓ림얼</Text>
+                            <Text style={styles.word}>나이먹고 그러고 싶니 친구야,,</Text>
                         </View>
                     </View>
 
                     <View style={styles.chatbox1}>
                         <Text style={styles.word}>
-                            내 채팅</Text>
+                            내맴 ^^</Text>
                     </View>
 
 
@@ -79,18 +53,27 @@ export default function Chatting({navigation}) {
                             placeholder='Send a message' />
                     </View>
 
-                    <TouchableOpacity style={{ marginLeft: '1%' }}>
+                    <TouchableOpacity>
                         <Icon
-                            style={styles.icon}
+                            style={{marginTop:6,
+                                padding:5,
+                                justifyContent:"center",
+                                alignItems:"center"
+                            }}
                             name="paper-plane-outline"
-                            color='#FFFFFF'
+                            color='#472816'
                             size={31} />
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ marginLeft: '3%'}}>
+                    <TouchableOpacity>
                         <Icon
-                            style={styles.icon}
+                            style={{marginTop:3,
+                                padding:5,
+                                alignItems: 'center',
+                                justifyContent:"center",
+                            
+                            }}
                             name="camera-outline"
-                            color='#FFFFFF'
+                            color='#472816'
                             size={36} />
                     </TouchableOpacity>
                 </View>
@@ -102,35 +85,22 @@ export default function Chatting({navigation}) {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        height:"100%",
+        width:"100%",
         backgroundColor: '#fff',
         alignItems: 'center',
-    },
-    header: {
-        flexDirection: 'row',
-        width: '100%',
-        height: '10%',
-        alignItems: 'center',
-        paddingTop: '6%',
-        backgroundColor: '#348CFA',
-        justifyContent: 'center',
     },
 
     body: {
         width: '100%',
-        height: '87.5%',
-        backgroundColor: '#292929',
-        //alignItems: 'center',
-    },
+        height: '100%',
+        backgroundColor: '#FFE7DB',
 
-    icon: {
-        margin: '2%',
-        alignItems: 'center',
     },
 
     footer: {
         width: '85%',
-        height: '5%',
+        height: '10%',
         justifyContent: 'flex-end',
 
     },
@@ -139,14 +109,14 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         justifyContent: 'center',
         color: '#000000',
-        fontSize: 22.5,
+        fontSize: 18,
         margin: '5%',
     },
 
     chatScrollView: {
-        height: '120%',
+        height: '90%',
         width: '100%',
-        backgroundColor: '#292929',
+        backgroundColor: '#FFF7EE',
         paddingTop: '5%',
     },
 
@@ -154,19 +124,17 @@ const styles = StyleSheet.create({
         margin: '3%',
         width: 60,
         height: 60,
-        //resizeMode: 'contain',
+
     },
 
     chatbox1: {
         borderRadius: 15,
-        borderWidth: 1,
-        borderColor: '#FFCD36',
-        backgroundColor: '#FFCD36',
+        backgroundColor: '#FFE7DB',
         width: '60%',
         height: 65,
         marginLeft: '30%',
         marginBottom: '5%',
-        //alignItems: 'center',
+
         justifyContent: 'center',
         alignSelf: 'center',
     },
@@ -179,38 +147,31 @@ const styles = StyleSheet.create({
         width: '60%',
         height: 65,
         marginRight: '19%',
-        //marginBottom: '5%',
-        //alignItems: 'center',
         justifyContent: 'center',
         alignSelf: 'center',
     },
 
     chatControl: {
-        flex:1,
-        height:"20%",
-        width:"20%",
+        height:"10%",
+        width:"70%",
         flexDirection: 'row',
         justifyContent: 'flex-start',
-        backgroundColor: '#348CFA',
+        backgroundColor: '#FFE7DB',
     },
     holder: {
         borderRadius: 25,
         borderWidth: 1,
-        height: '65%',
-        width: '60%',
-        borderColor: '#FFFFFF',
+        width:"100%",
+        borderColor: '#472816',
         margin: '3%',
         alignItems: 'flex-start',
     },
 
     chatInput: {
-        //flex: 1,
-        height: '100%',
-        width: '90%',
+        width:"80%",
         margin: '5%',
         justifyContent: 'center',
-        //borderColor: '#00ff0000',
-        color: '#FFFFFF',
+        color: '#472816',
     },
     chat: {
         fontSize: 18,
@@ -218,11 +179,6 @@ const styles = StyleSheet.create({
         color: '#4A4A4A',
         margin: 2,
     },
-    settingView: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'flex-end',
-        marginRight: '1%',
-    }
+
 
 });
